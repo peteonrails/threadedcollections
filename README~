@@ -25,7 +25,3 @@ I have no plans to break the interface but I do plan to make two major enhanceme
 2. Make it work with fibers and processes in addition to threads. 
 
 Note: Don't implement the Observer pattern inside the block! 
-
-Submit bug reports and issues through Lighthouse:
-
-http://peteonrails.lighthouseapp.com/projects/11058-threaded-collections/overview
