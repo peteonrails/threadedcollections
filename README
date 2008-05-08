@@ -1,0 +1,26 @@
+Threaded Collections is a package for iterating through collections 
+over multiple threads. With large collections, sometimes it can be 
+more efficient to process a collection in parallel, provided that the 
+collected items don't have a interdependencies, or need to be processed
+in a specific order. 
+
+Usage: 
+
+require "threaded_collections"
+
+threadcount = 2
+arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
+tps = ThreadedCollectionProcessor.new(arr)
+tps.process(2) { |thread_id, item| puts "Thread #{thread_id} processed item: #{item}" }
+
+I abstracted this pattern from a web services client that posted items from a collection, but
+each request took a second to process. The remote service had plenty of threads available, so
+I parallelized the task with this pattern. 
+
+THIS IS AN ALPHA RELEASE. 
+
+I have no plans to break the interface but I do plan to make two major enhancements: 
+
+1. Make it possible to mix this functionality in to the Ruby iterators, so you don't have create the ThreadedCollectionProcessor.
+2. Make it work with fibers and processes in addition to threads. 
+ 
