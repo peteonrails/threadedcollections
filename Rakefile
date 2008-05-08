@@ -12,7 +12,6 @@ spec = Gem::Specification.new do |s|
     s.summary   =   "A package for manipulating collections over many threads"
     s.files     =   FileList['lib/*.rb', 'test/*'].to_a
     s.require_path  =   "lib"
-    s.autorequire   =   "fileutils"
     s.test_files = Dir.glob('tests/*.rb')
     s.has_rdoc  =   true
     s.extra_rdoc_files  =   ["README"]
@@ -23,7 +22,7 @@ Rake::GemPackageTask.new(spec) do |pkg|
 end
 
 
-task :pkg => "pkg/#{spec.name}-#{spec.version}.gem" do
+task :gem => "pkg/#{spec.name}-#{spec.version}.gem" do
     puts "generated latest version"
 end
 
