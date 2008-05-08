@@ -23,4 +23,5 @@ I have no plans to break the interface but I do plan to make two major enhanceme
 
 1. Make it possible to mix this functionality in to the Ruby iterators, so you don't have create the ThreadedCollectionProcessor.
 2. Make it work with fibers and processes in addition to threads. 
- 
+
+Note: Don't implement the Observer pattern inside the block! 
