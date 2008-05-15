@@ -10,4 +10,4 @@ spec = Gem::Specification.new do |s|
     s.test_files = ['tests/threaded_collections_test.rb']
     s.has_rdoc  =   true
     s.extra_rdoc_files  =   ["README"]
-end  
+end   
